@@ -271,14 +271,10 @@ def runLoki(inputLIST, filterLIST=[], refDICT={}):
 
             # save lokiResultDICT to resultDICT
             for k in lokiResultDICT:
-                if k not in resultDICT:
-                    resultDICT[k] = []
-                if type(resultDICT[k]) != list:
-                    resultDICT[k] = [resultDICT[k]] if resultDICT[k] else []
-                if type(lokiResultDICT[k]) == list:
-                    resultDICT[k].extend(lokiResultDICT[k])
+                if type(lokiResultDICT[k]) == list: 
+                    resultDICT[k] = lokiResultDICT[k]
                 else:
-                    resultDICT[k].append(lokiResultDICT[k])
+                    resultDICT[k] = [lokiResultDICT[k]]
     else:
         resultDICT["msg"] = lokiRst.getMessage()
     return resultDICT
