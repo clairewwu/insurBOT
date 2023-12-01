@@ -64,4 +64,32 @@ def getResult(inputSTR, utterance, args, resultDICT, refDICT):
             resultDICT['way_pay'] = args[0]
             
 
+    if utterance == "用[line] [pay]付":
+        if CHATBOT_MODE:
+            resultDICT["response"] = getResponse(utterance, args)
+        else:
+            resultDICT['way_pay'] = args[0]
+            
+
+    if utterance == "用[line] [pay]給錢":
+        if CHATBOT_MODE:
+            resultDICT["response"] = getResponse(utterance, args)
+        else:
+            resultDICT['way_pay'] = args[0]
+            
+
+    if utterance == "用[現金]付":
+        if CHATBOT_MODE:
+            resultDICT["response"] = getResponse(utterance, args)
+        else:
+            resultDICT['way_pay'] = args[0]
+            
+
+    if utterance == "用[現金]給錢":
+        if CHATBOT_MODE:
+            resultDICT["response"] = getResponse(utterance, args)
+        else:
+            resultDICT['way_pay'] = args[0]
+            
+
     return resultDICT

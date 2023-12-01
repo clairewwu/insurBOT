@@ -50,48 +50,6 @@ def getResponse(utterance, args):
 
 def getResult(inputSTR, utterance, args, resultDICT, refDICT):
     debugInfo(inputSTR, utterance)
-    if utterance == "保障哪些[部分]":
-        if CHATBOT_MODE:
-            resultDICT["response"] = getResponse(utterance, args)
-        else:
-            resultDICT['benefit'] = True
-            
-
-    if utterance == "哪些傷害[會]支付":
-        if CHATBOT_MODE:
-            resultDICT["response"] = getResponse(utterance, args)
-        else:
-            resultDICT['benefit'] = True
-            
-
-    if utterance == "哪些傷害[會]理賠":
-        if CHATBOT_MODE:
-            resultDICT["response"] = getResponse(utterance, args)
-        else:
-            resultDICT['benefit'] = True
-            
-
-    if utterance == "哪些意外[會]支付":
-        if CHATBOT_MODE:
-            resultDICT["response"] = getResponse(utterance, args)
-        else:
-            resultDICT['benefit'] = True
-            
-
-    if utterance == "哪些意外[會]理賠":
-        if CHATBOT_MODE:
-            resultDICT["response"] = getResponse(utterance, args)
-        else:
-            resultDICT['benefit'] = True
-            
-
-    if utterance == "怎麼樣有理賠":
-        if CHATBOT_MODE:
-            resultDICT["response"] = getResponse(utterance, args)
-        else:
-            resultDICT['benefit'] = True
-            
-
     if utterance == "怎麼樣理賠":
         if CHATBOT_MODE:
             resultDICT["response"] = getResponse(utterance, args)
@@ -99,39 +57,87 @@ def getResult(inputSTR, utterance, args, resultDICT, refDICT):
             resultDICT['benefit'] = True
             
 
-    if utterance == "有哪些給付[項目]":
+    if utterance == "會給付":
         if CHATBOT_MODE:
             resultDICT["response"] = getResponse(utterance, args)
         else:
             resultDICT['benefit'] = True
             
 
-    if utterance == "有哪些賠償[項目]":
+    if utterance == "有哪些保障":
         if CHATBOT_MODE:
             resultDICT["response"] = getResponse(utterance, args)
         else:
             resultDICT['benefit'] = True
             
 
-    if utterance == "獲得保險金":
+    if utterance == "給付的項目":
         if CHATBOT_MODE:
             resultDICT["response"] = getResponse(utterance, args)
         else:
             resultDICT['benefit'] = True
             
 
-    if utterance == "給付[項目]有哪些":
+    if utterance == "給付項目":
         if CHATBOT_MODE:
             resultDICT["response"] = getResponse(utterance, args)
         else:
             resultDICT['benefit'] = True
             
 
-    if utterance == "賠償[項目]有哪些":
+    if utterance == "保障什麼":
         if CHATBOT_MODE:
             resultDICT["response"] = getResponse(utterance, args)
         else:
             resultDICT['benefit'] = True
             
+
+    if utterance == "保障有哪些":
+        if CHATBOT_MODE:
+            resultDICT["response"] = getResponse(utterance, args)
+        else:
+            resultDICT['benefit'] = True
+            
+
+    if utterance == "可以保障我什麼":
+        if CHATBOT_MODE:
+            resultDICT["response"] = getResponse(utterance, args)
+        else:
+            resultDICT['benefit'] = True
+            
+
+    if utterance == "獲得什麼保障":
+        if CHATBOT_MODE:
+            resultDICT["response"] = getResponse(utterance, args)
+        else:
+            resultDICT['benefit'] = True
+            
+
+    if utterance == "獲得什麼樣的保障":
+        if CHATBOT_MODE:
+            resultDICT["response"] = getResponse(utterance, args)
+        else:
+            resultDICT['benefit'] = True
+            
+
+    if utterance == "給我什麼樣的保障":
+        if CHATBOT_MODE:
+            resultDICT["response"] = getResponse(utterance, args)
+        else:
+            resultDICT['benefit'] = True
+            
+
+    if utterance == "那有哪些保障":
+        if CHATBOT_MODE:
+            resultDICT["response"] = getResponse(utterance, args)
+        else:
+            resultDICT['benefit'] = True
+
+    if utterance == "賠償了啥":
+        if CHATBOT_MODE:
+            resultDICT["response"] = getResponse(utterance, args)
+        else:
+            resultDICT['benefit'] = True
+
 
     return resultDICT

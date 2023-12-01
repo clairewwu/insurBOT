@@ -2,7 +2,7 @@
 # -*- coding:utf-8 -*-
 
 """
-    Loki module for Identity
+    Loki module for feature_v2
 
     Input:
         inputSTR      str,
@@ -19,7 +19,7 @@ from random import sample
 import json
 import os
 
-DEBUG_Identity = True
+DEBUG_feature_v2 = True
 CHATBOT_MODE = False
 
 userDefinedDICT = {}
@@ -31,14 +31,14 @@ except Exception as e:
 responseDICT = {}
 if CHATBOT_MODE:
     try:
-        responseDICT = json.load(open(os.path.join(os.path.dirname(os.path.dirname(__file__)), "reply/reply_Identity.json"), encoding="utf-8"))
+        responseDICT = json.load(open(os.path.join(os.path.dirname(os.path.dirname(__file__)), "reply/reply_feature_v2.json"), encoding="utf-8"))
     except Exception as e:
         print("[ERROR] responseDICT => {}".format(str(e)))
 
 # 將符合句型的參數列表印出。這是 debug 或是開發用的。
 def debugInfo(inputSTR, utterance):
-    if DEBUG_Identity:
-        print("[Identity] {} ===> {}".format(inputSTR, utterance))
+    if DEBUG_feature_v2:
+        print("[feature_v2] {} ===> {}".format(inputSTR, utterance))
 
 def getResponse(utterance, args):
     resultSTR = ""
@@ -50,74 +50,60 @@ def getResponse(utterance, args):
 
 def getResult(inputSTR, utterance, args, resultDICT, refDICT):
     debugInfo(inputSTR, utterance)
-    if utterance == "[我]是家庭主婦":
+    if utterance == "壽險的特色":
         if CHATBOT_MODE:
             resultDICT["response"] = getResponse(utterance, args)
         else:
-            resultDICT['identity'] = True
+            resultDICT['feature'] = True
             
 
-    if utterance == "家庭":
+    if utterance == "是會有哪些特色":
         if CHATBOT_MODE:
             resultDICT["response"] = getResponse(utterance, args)
         else:
-            resultDICT['identity'] = True
+            resultDICT['feature'] = True
             
 
-    if utterance == "是[個][上班族]":
+    if utterance == "特色是會有哪些":
         if CHATBOT_MODE:
             resultDICT["response"] = getResponse(utterance, args)
         else:
-            resultDICT['identity'] = True
+            resultDICT['feature'] = True
             
 
-    if utterance == "是上班族的話":
+    if utterance == "有什麼特別":
         if CHATBOT_MODE:
             resultDICT["response"] = getResponse(utterance, args)
         else:
-            resultDICT['identity'] = True
+            resultDICT['feature'] = True
+
+
+    if utterance == "特色是什麼":
+        if CHATBOT_MODE:
+            resultDICT["response"] = getResponse(utterance, args)
+        else:
+            resultDICT['feature'] = True
             
 
-    if utterance == "是在職的[人]":
+    if utterance == "此險的特色":
         if CHATBOT_MODE:
             resultDICT["response"] = getResponse(utterance, args)
         else:
-            resultDICT['identity'] = True
+            resultDICT['feature'] = True        
             
 
-    if utterance == "是從事職業的[人]":
+    if utterance == "這個險的特色":
         if CHATBOT_MODE:
             resultDICT["response"] = getResponse(utterance, args)
         else:
-            resultDICT['identity'] = True
+            resultDICT['feature'] = True  
             
 
-    if utterance == "是有家庭的[人]":
+    if utterance == "此險特色":
         if CHATBOT_MODE:
             resultDICT["response"] = getResponse(utterance, args)
         else:
-            resultDICT['identity'] = True
-            
-
-    if utterance == "是有工作的[人]":
-        if CHATBOT_MODE:
-            resultDICT["response"] = getResponse(utterance, args)
-        else:
-            resultDICT['identity'] = True
-            
-
-    if utterance == "是有職業的[人]":
-        if CHATBOT_MODE:
-            resultDICT["response"] = getResponse(utterance, args)
-        else:
-            resultDICT['identity'] = True
-            
-
-    if utterance == "退休":
-        if CHATBOT_MODE:
-            resultDICT["response"] = getResponse(utterance, args)
-        else:
-            resultDICT['identity'] = True
+            resultDICT['feature'] = True
             
 
     return resultDICT

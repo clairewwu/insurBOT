@@ -50,7 +50,17 @@ def getResponse(utterance, args):
 
 def getResult(inputSTR, utterance, args, resultDICT, refDICT):
     debugInfo(inputSTR, utterance)
-    if utterance == "保意外險":
+    if utterance == "上學過程":
+        if CHATBOT_MODE:
+            resultDICT["response"] = getResponse(utterance, args)
+        else:
+            resultDICT['acc_con'] = []
+            resultDICT['acc_con'].append("traffic")
+            if "accident" not in resultDICT['type']:
+                resultDICT['type'].append("accident")
+            
+
+    if utterance == "保便宜的意外險":
         if CHATBOT_MODE:
             resultDICT["response"] = getResponse(utterance, args)
         else:
@@ -66,10 +76,22 @@ def getResult(inputSTR, utterance, args, resultDICT, refDICT):
                 resultDICT['type'].append("accident")
             
 
+    if utterance == "有工作考量":
+        if CHATBOT_MODE:
+            resultDICT["response"] = getResponse(utterance, args)
+        else:
+            resultDICT['acc_con'] = []
+            resultDICT['acc_con'].append("job")
+            if "accident" not in resultDICT['type']:
+                resultDICT['type'].append("accident")
+            
+
     if utterance == "工作遇到一些事故":
         if CHATBOT_MODE:
             resultDICT["response"] = getResponse(utterance, args)
         else:
+            resultDICT['acc_con'] = []
+            resultDICT['acc_con'].append("job")
             if "accident" not in resultDICT['type']:
                 resultDICT['type'].append("accident")
             
@@ -90,6 +112,14 @@ def getResult(inputSTR, utterance, args, resultDICT, refDICT):
                 resultDICT['type'].append("accident")
             
 
+    if utterance == "意外險":
+        if CHATBOT_MODE:
+            resultDICT["response"] = getResponse(utterance, args)
+        else:
+            if "accident" not in resultDICT['type']:
+                resultDICT['type'].append("accident")
+            
+
     if utterance == "應對突發狀況":
         if CHATBOT_MODE:
             resultDICT["response"] = getResponse(utterance, args)
@@ -102,6 +132,8 @@ def getResult(inputSTR, utterance, args, resultDICT, refDICT):
         if CHATBOT_MODE:
             resultDICT["response"] = getResponse(utterance, args)
         else:
+            resultDICT['acc_con'] = []
+            resultDICT['acc_con'].append("job")
             if "accident" not in resultDICT['type']:
                 resultDICT['type'].append("accident")
             
@@ -122,6 +154,16 @@ def getResult(inputSTR, utterance, args, resultDICT, refDICT):
                 resultDICT['type'].append("accident")
             
 
+    if utterance == "考量工作":
+        if CHATBOT_MODE:
+            resultDICT["response"] = getResponse(utterance, args)
+        else:
+            resultDICT['acc_con'] = []
+            resultDICT['acc_con'].append("job")
+            if "accident" not in resultDICT['type']:
+                resultDICT['type'].append("accident")
+            
+
     if utterance == "覺得意外無處不在":
         if CHATBOT_MODE:
             resultDICT["response"] = getResponse(utterance, args)
@@ -134,6 +176,8 @@ def getResult(inputSTR, utterance, args, resultDICT, refDICT):
         if CHATBOT_MODE:
             resultDICT["response"] = getResponse(utterance, args)
         else:
+            resultDICT['acc_con'] = []
+            resultDICT['acc_con'].append("job")
             if "accident" not in resultDICT['type']:
                 resultDICT['type'].append("accident")
             
@@ -150,8 +194,50 @@ def getResult(inputSTR, utterance, args, resultDICT, refDICT):
         if CHATBOT_MODE:
             resultDICT["response"] = getResponse(utterance, args)
         else:
+            resultDICT['acc_con'] = []
+            resultDICT['acc_con'].append("job")
             if "accident" not in resultDICT['type']:
                 resultDICT['type'].append("accident")
             
+
+    if utterance == "不是疾病的":
+        if CHATBOT_MODE:
+            resultDICT["response"] = getResponse(utterance, args)
+        else:
+            if "accident" not in resultDICT['type']:
+                resultDICT['type'].append("accident")
+            
+
+    if utterance == "遇到車禍":
+        if CHATBOT_MODE:
+            resultDICT["response"] = getResponse(utterance, args)
+        else:
+            if "accident" not in resultDICT['type']:
+                resultDICT['type'].append("accident")
+            
+
+    if utterance == "非疾病的":
+        if CHATBOT_MODE:
+            resultDICT["response"] = getResponse(utterance, args)
+        else:
+            if "accident" not in resultDICT['type']:
+                resultDICT['type'].append("accident")
+            
+
+    if utterance == "預防突發事故":
+        if CHATBOT_MODE:
+            resultDICT["response"] = getResponse(utterance, args)
+        else:
+            if "accident" not in resultDICT['type']:
+                resultDICT['type'].append("accident")
+            
+
+    if utterance == "有職業上的考量":
+        if CHATBOT_MODE:
+            resultDICT["response"] = getResponse(utterance, args)
+        else:
+            if "accident" not in resultDICT['type']:
+                resultDICT['type'].append("accident")
+            pass
 
     return resultDICT
