@@ -54,7 +54,8 @@ def getResult(inputSTR, utterance, args, resultDICT, refDICT):
         if CHATBOT_MODE:
             resultDICT["response"] = getResponse(utterance, args)
         else:
-            resultDICT['traffic'] = True
+            resultDICT['acc_con'] = []
+            resultDICT['acc_con'].append("traffic")
             if "accident" not in resultDICT['type']:
                 resultDICT['type'].append("accident")
             
@@ -63,7 +64,8 @@ def getResult(inputSTR, utterance, args, resultDICT, refDICT):
         if CHATBOT_MODE:
             resultDICT["response"] = getResponse(utterance, args)
         else:
-            resultDICT['traffic'] = True
+            resultDICT['acc_con'] = []
+            resultDICT['acc_con'].append("traffic")
             if "accident" not in resultDICT['type']:
                 resultDICT['type'].append("accident")
             
@@ -72,9 +74,58 @@ def getResult(inputSTR, utterance, args, resultDICT, refDICT):
         if CHATBOT_MODE:
             resultDICT["response"] = getResponse(utterance, args)
         else:
-            resultDICT['traffic'] = True
+            resultDICT['acc_con'] = []
+            resultDICT['acc_con'].append("traffic")
             if "accident" not in resultDICT['type']:
                 resultDICT['type'].append("accident")
             
+
+    if utterance == "與交通有關":
+        if CHATBOT_MODE:
+            resultDICT["response"] = getResponse(utterance, args)
+        else:
+            resultDICT['acc_con'] = []
+            resultDICT['acc_con'].append("traffic")
+            if "accident" not in resultDICT['type']:
+                resultDICT['type'].append("accident")
+            
+
+    if utterance == "通勤方式":
+        if CHATBOT_MODE:
+            resultDICT["response"] = getResponse(utterance, args)
+        else:
+            resultDICT['acc_con'] = []
+            resultDICT['acc_con'].append("traffic")
+            if "accident" not in resultDICT['type']:
+                resultDICT['type'].append("accident")
+
+    if utterance == "我是行人":
+        if CHATBOT_MODE:
+            resultDICT["response"] = getResponse(utterance, args)
+        else:
+            resultDICT['acc_con'] = []
+            resultDICT['acc_con'].append("traffic")
+            if "accident" not in resultDICT['type']:
+                resultDICT['type'].append("accident")
+            
+
+    if utterance == "我都走路":
+        if CHATBOT_MODE:
+            resultDICT["response"] = getResponse(utterance, args)
+        else:
+            resultDICT['acc_con'] = []
+            resultDICT['acc_con'].append("traffic")
+            if "accident" not in resultDICT['type']:
+                resultDICT['type'].append("accident")
+            
+
+    if utterance == "交通上的考量":
+        if CHATBOT_MODE:
+            resultDICT["response"] = getResponse(utterance, args)
+        else:
+            resultDICT['acc_con'] = []
+            resultDICT['acc_con'].append("traffic")
+            if "accident" not in resultDICT['type']:
+                resultDICT['type'].append("accident")
 
     return resultDICT

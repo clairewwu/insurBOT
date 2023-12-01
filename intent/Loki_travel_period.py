@@ -77,7 +77,8 @@ def getResult(inputSTR, utterance, args, resultDICT, refDICT):
             resultDICT['place'] = args[0]
             resultDICT['period'] = args[1]
             if "travel" not in resultDICT['type']:
-                resultDICT['type'].append("travel")           
+                resultDICT['type'].append("travel") 
+            
 
     if utterance == "[國外]玩[10天]":
         if CHATBOT_MODE:
@@ -86,7 +87,8 @@ def getResult(inputSTR, utterance, args, resultDICT, refDICT):
             resultDICT['place'] = args[0]
             resultDICT['period'] = args[1]
             if "travel" not in resultDICT['type']:
-                resultDICT['type'].append("travel")            
+                resultDICT['type'].append("travel") 
+            
 
     if utterance == "出國玩[10天]":
         if CHATBOT_MODE:
@@ -96,7 +98,7 @@ def getResult(inputSTR, utterance, args, resultDICT, refDICT):
             resultDICT['period'] = args[0]
             if "travel" not in resultDICT['type']:
                 resultDICT['type'].append("travel")
-
+            
 
     if utterance == "去[國外][10天]":
         if CHATBOT_MODE:
@@ -106,7 +108,7 @@ def getResult(inputSTR, utterance, args, resultDICT, refDICT):
             resultDICT['period'] = args[1]
             if "travel" not in resultDICT['type']:
                 resultDICT['type'].append("travel")
-
+            
 
     if utterance == "去[日本][10天]":
         if CHATBOT_MODE:
@@ -116,7 +118,7 @@ def getResult(inputSTR, utterance, args, resultDICT, refDICT):
             resultDICT['period'] = args[1]
             if "travel" not in resultDICT['type']:
                 resultDICT['type'].append("travel")
-
+            
 
     if utterance == "在[台灣]玩[10天]":
         if CHATBOT_MODE:
@@ -126,7 +128,7 @@ def getResult(inputSTR, utterance, args, resultDICT, refDICT):
             resultDICT['period'] = args[1]
             if "travel" not in resultDICT['type']:
                 resultDICT['type'].append("travel")
-
+            
 
     if utterance == "打工度假[10天]":
         if CHATBOT_MODE:
@@ -136,7 +138,7 @@ def getResult(inputSTR, utterance, args, resultDICT, refDICT):
             resultDICT['period'] = args[0]
             if "travel" not in resultDICT['type']:
                 resultDICT['type'].append("travel")
-
+            
 
     if utterance == "留學[10天]":
         if CHATBOT_MODE:
@@ -146,7 +148,17 @@ def getResult(inputSTR, utterance, args, resultDICT, refDICT):
             resultDICT['period'] = args[0]
             if "travel" not in resultDICT['type']:
                 resultDICT['type'].append("travel")
+            
 
+    if utterance == "要去[國外][10天]":
+        if CHATBOT_MODE:
+            resultDICT["response"] = getResponse(utterance, args)
+        else:
+            resultDICT['place'] = "國外"
+            resultDICT['period'] = args[1]
+            if "travel" not in resultDICT['type']:
+                resultDICT['type'].append("travel") 
+            
 
     if utterance == "赴德[180天]":
         if CHATBOT_MODE:
@@ -156,7 +168,7 @@ def getResult(inputSTR, utterance, args, resultDICT, refDICT):
             resultDICT['period'] = args[0]
             if "travel" not in resultDICT['type']:
                 resultDICT['type'].append("travel")
-
+            
 
     if utterance == "遊學[10天]":
         if CHATBOT_MODE:
@@ -165,6 +177,7 @@ def getResult(inputSTR, utterance, args, resultDICT, refDICT):
             resultDICT['place'] = "國外"
             resultDICT['period'] = args[0]
             if "travel" not in resultDICT['type']:
-                resultDICT['type'].append("travel")            
+                resultDICT['type'].append("travel") 
+            
 
     return resultDICT

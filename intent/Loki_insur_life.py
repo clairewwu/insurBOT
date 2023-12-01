@@ -54,6 +54,11 @@ def getResult(inputSTR, utterance, args, resultDICT, refDICT):
         if CHATBOT_MODE:
             resultDICT["response"] = getResponse(utterance, args)
         else:
+            if 'life_con' in resultDICT:
+                resultDICT['life_con'].append("high")
+            else:
+                resultDICT['life_con'] = []
+                resultDICT['life_con'].append("high")
             if "life" not in resultDICT['type']:
                 resultDICT['type'].append("life")
             
@@ -64,9 +69,9 @@ def getResult(inputSTR, utterance, args, resultDICT, refDICT):
         else:
             if "life" not in resultDICT['type']:
                 resultDICT['type'].append("life")
-            
 
-    if utterance == "保壽險":
+
+    if utterance == "保便宜的壽險":
         if CHATBOT_MODE:
             resultDICT["response"] = getResponse(utterance, args)
         else:
@@ -78,6 +83,8 @@ def getResult(inputSTR, utterance, args, resultDICT, refDICT):
         if CHATBOT_MODE:
             resultDICT["response"] = getResponse(utterance, args)
         else:
+            resultDICT['life_con'] = []
+            resultDICT['life_con'].append("high")
             if "life" not in resultDICT['type']:
                 resultDICT['type'].append("life")
             
@@ -90,10 +97,20 @@ def getResult(inputSTR, utterance, args, resultDICT, refDICT):
                 resultDICT['type'].append("life")
             
 
+    if utterance == "壽險":
+        if CHATBOT_MODE:
+            resultDICT["response"] = getResponse(utterance, args)
+        else:
+            if "life" not in resultDICT['type']:
+                resultDICT['type'].append("life")
+            
+
     if utterance == "怕留給家人":
         if CHATBOT_MODE:
             resultDICT["response"] = getResponse(utterance, args)
         else:
+            resultDICT['life_con'] = []
+            resultDICT['life_con'].append("high")
             if "life" not in resultDICT['type']:
                 resultDICT['type'].append("life")
             
@@ -102,6 +119,8 @@ def getResult(inputSTR, utterance, args, resultDICT, refDICT):
         if CHATBOT_MODE:
             resultDICT["response"] = getResponse(utterance, args)
         else:
+            resultDICT['life_con'] = []
+            resultDICT['life_con'].append("high")
             if "life" not in resultDICT['type']:
                 resultDICT['type'].append("life")
             
@@ -118,14 +137,23 @@ def getResult(inputSTR, utterance, args, resultDICT, refDICT):
         if CHATBOT_MODE:
             resultDICT["response"] = getResponse(utterance, args)
         else:
-            if "life" not in resultDICT['type']:
-                resultDICT['type'].append("life")
+            pass
+            # if 'life_con' in resultDICT:
+            #     resultDICT['life_con'].append("high")
+            # else:
+            #     resultDICT['life_con'] = []
+            #     resultDICT['life_con'].append("high")
+            # if "life" not in resultDICT['type']:
+            #     resultDICT['type'].append("life")
+        
             
 
     if utterance == "死後想要給家人保障":
         if CHATBOT_MODE:
             resultDICT["response"] = getResponse(utterance, args)
         else:
+            resultDICT['life_con'] = []
+            resultDICT['life_con'].append("high")
             if "life" not in resultDICT['type']:
                 resultDICT['type'].append("life")
             
@@ -134,6 +162,8 @@ def getResult(inputSTR, utterance, args, resultDICT, refDICT):
         if CHATBOT_MODE:
             resultDICT["response"] = getResponse(utterance, args)
         else:
+            resultDICT['life_con'] = []
+            resultDICT['life_con'].append("high")
             if "life" not in resultDICT['type']:
                 resultDICT['type'].append("life")
             
@@ -142,6 +172,8 @@ def getResult(inputSTR, utterance, args, resultDICT, refDICT):
         if CHATBOT_MODE:
             resultDICT["response"] = getResponse(utterance, args)
         else:
+            resultDICT['life_con'] = []
+            resultDICT['life_con'].append("high")
             if "life" not in resultDICT['type']:
                 resultDICT['type'].append("life")
             
